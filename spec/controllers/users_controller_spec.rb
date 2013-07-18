@@ -2,7 +2,10 @@ require 'spec_helper'
 
 describe UsersController do
   let(:user) { Fabricate(:user) }
-  before { user } # initialize it
+  before do
+    user
+    user.confirm!
+  end
 
   describe 'GET index' do
     context 'unauthorized' do
@@ -33,7 +36,7 @@ describe UsersController do
         response.response_code.should == 401
       end
     end
-    
+
     context 'wrong token' do
       before { get :show, id: user.id, auth_token: "LTXpN9pzxbWFm55vx1za"} #Made up token
 

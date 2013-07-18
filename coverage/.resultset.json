@@ -255,12 +255,13 @@
   },
   "RSpec": {
     "coverage": {
-      "/Users/joscas/projects2/base_app/app/models/user.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/models/user.rb": [
         1,
         null,
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -287,17 +288,17 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/controllers/application_controller.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/controllers/application_controller.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/helpers/application_helper.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/helpers/auth_helper.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/helpers/auth_helper.rb": [
         1,
         null,
         1,
@@ -315,7 +316,7 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/controllers/omniauth_callbacks_controller.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/controllers/omniauth_callbacks_controller.rb": [
         1,
         1,
         4,
@@ -339,7 +340,7 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/controllers/registrations_controller.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/controllers/registrations_controller.rb": [
         1,
         1,
         null,
@@ -353,7 +354,7 @@
         2,
         2,
         1,
-        1,
+        0,
         null,
         null,
         1,
@@ -374,7 +375,7 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/controllers/sessions_controller.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -446,7 +447,7 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/controllers/users_controller.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -461,13 +462,13 @@
         null,
         null
       ],
-      "/Users/joscas/projects2/base_app/app/serializers/user_serializer.rb": [
+      "/Users/keemon/Documents/rails/base_app/app/serializers/user_serializer.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1367533534
+    "timestamp": 1374161221
   },
   "Cucumber Features": {
     "coverage": {

@@ -7,19 +7,19 @@ describe RegistrationsController do
 
   describe 'POST create' do
     context 'registration error' do
-      before { post :create, :user => {} } 
+      before { post :create, :user => {} }
       it 'returns http 422' do
        response.response_code.should == 422
       end
     end
-    context 'registration success' do
+    context 'registration success with email confirmation' do
       before do
         user = Fabricate.attributes_for(:user)
         user[:password_confirmation] = user[:password]
         xhr :post, :create, :user => user
       end
       it 'returns http 201' do
-        response.response_code.should == 201
+        response.response_code.should == 401
       end
     end
   end
@@ -28,6 +28,7 @@ describe RegistrationsController do
     context 'Invalid credentials no auth token' do
       before do
         user = Fabricate(:user)
+        user.confirm!
         user.ensure_authentication_token!
         xhr :put, :update, :id => user.id, :user => {:name => "NoToken NewName"}
       end
@@ -38,6 +39,7 @@ describe RegistrationsController do
     context 'Update password' do
       before do
         @user = Fabricate(:user)
+        @user.confirm!
         @user.ensure_authentication_token!
         xhr :put,
             :update,
@@ -63,6 +65,7 @@ describe RegistrationsController do
     context 'Update fields' do
       before do
         @user = Fabricate(:user)
+        @user.confirm!
         @user.ensure_authentication_token!
         xhr :put,
             :update,
@@ -87,6 +90,7 @@ describe RegistrationsController do
     context 'Invalid credentials wrong auth token' do
       before do
         @user = Fabricate(:user)
+        @user.confirm!
         @user.ensure_authentication_token!
         xhr :put,
             :update,
@@ -102,6 +106,7 @@ describe RegistrationsController do
     context 'No current password' do
       before do
         @user = Fabricate(:user)
+        @user.confirm!
         @user.ensure_authentication_token!
         xhr :put,
             :update,
