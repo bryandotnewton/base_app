@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :omniauth_providers => [:google_oauth2, :linkedin]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :admin
+  #attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :admin
   # TODO: hack. This field needs to be part of the ember data model for updates, but
   # we generally don't want it for controller actions
   # attr_accessible :title, :body

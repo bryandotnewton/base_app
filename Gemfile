@@ -58,16 +58,9 @@ gem 'thin'
 
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => 'rails4'
+#gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => 'rails4'
+gem 'devise', '3.0.0'
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
 gem 'figaro'
-
-
-
-
-#For upgrade
-gem 'protected_attributes'
-gem 'rails-observers'
-gem 'activerecord-deprecated_finders'
