@@ -1,6 +1,6 @@
 BaseApp.SignInController = Ember.Controller.extend({
   needs: ["users_edit"],
-  
+
   email: null,
   password: null,
   remember: false,
