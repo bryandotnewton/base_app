@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :omniauthable,
+         :confirmable,
          :omniauth_providers => [:google_oauth2, :linkedin]
 
   # Setup accessible (or protected) attributes for your model

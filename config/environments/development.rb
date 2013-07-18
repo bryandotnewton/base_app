@@ -1,7 +1,7 @@
 BaseApp::Application.configure do
-  
+
   config.ember.variant = :development
-  
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -31,4 +31,15 @@ BaseApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    #domain               => '[redacted]',
+    #:user_name            => '[redacted]',
+    #:password             => '[redacted]',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
 end

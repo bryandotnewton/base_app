@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
-  
+
   def create
     # TODO: fixme
     # This is needed to get rid of the mass security error on this field.
@@ -16,9 +16,9 @@ class RegistrationsController < Devise::RegistrationsController
     else
       render json: { :errors => @user.errors.full_messages[0] }, status: 422
       return
-    end    
+    end
   end
-  
+
   def update
     resource = resource_class.find(params[:id])
     if resource.update_with_password(resource_params)
@@ -29,5 +29,5 @@ class RegistrationsController < Devise::RegistrationsController
       render json: { :errors => resource.errors.full_messages[0] }, status: 422
       return
     end
-  end  
+  end
 end
