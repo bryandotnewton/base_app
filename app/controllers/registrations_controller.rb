@@ -8,9 +8,10 @@ class RegistrationsController < Devise::RegistrationsController
     # it from the JSON request when we're not doing the update.
     resource_params.delete(:current_password)
 
-    build_resource
+
+    build_resource(resource_params)
+
     if resource.save
-      sign_up(resource_name, resource)
       render json: resource, status: 201
       return
     else

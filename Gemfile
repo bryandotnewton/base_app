@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-ruby "1.9.3"
 
-gem 'rails'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,17 +9,18 @@ gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+#group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+  gem 'coffee-rails', '~> 4.0.0'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
 
 gem 'jquery-rails'
+
+gem 'ember-rails', '0.13.0'
+gem 'ember-source', '1.0.0.rc6.2'
+gem 'ember-auth-rails'
+gem 'ember-auth-source'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -54,13 +54,20 @@ group :development, :test do
 end
 
 gem 'thin'
-gem 'ember-rails'
-gem 'ember-auth-rails'
-gem 'ember-auth-source', '~> 6.0.0'
+
+
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-gem 'devise'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :branch => 'rails4'
 gem 'active_model_serializers'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
 gem 'figaro'
+
+
+
+
+#For upgrade
+gem 'protected_attributes'
+gem 'rails-observers'
+gem 'activerecord-deprecated_finders'

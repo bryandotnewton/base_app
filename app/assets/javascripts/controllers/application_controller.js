@@ -1,10 +1,10 @@
 BaseApp.ApplicationController = Ember.Controller.extend({
   needs: ["users_edit"],
-  
+
   signOut: function() {
     BaseApp.Auth.signOut();
   },
-  
+
   activeHome: (function() {
       return this.get('currentRoute') === 'home';
   }).property('currentRoute'),
@@ -12,19 +12,19 @@ BaseApp.ApplicationController = Ember.Controller.extend({
   activeSignUp: (function() {
       return this.get('currentRoute') === 'sign_up';
   }).property('currentRoute'),
-  
+
   activeUsers: (function() {
       return this.get('currentRoute') === 'users';
   }).property('currentRoute'),
-  
+
   activeUser: (function() {
       return this.get('currentRoute') === 'user';
   }).property('currentRoute'),
-  
+
   activeSignIn: (function() {
       return this.get('currentRoute') === 'sign_in';
   }).property('currentRoute'),
-  
+
   backupUserForm: function(content){
     var backup = {}
     var props = this.getEmberProps("User");
@@ -33,13 +33,13 @@ BaseApp.ApplicationController = Ember.Controller.extend({
     };
     return backup;
   },
-  
+
   fillForm: function(content, backup){
     for (prop in backup) {
       content.set(prop,backup[prop]);
     }
   },
-  
+
   getEmberProps: function(model) {
     var props = [];
     var obj_name = "BaseApp." + model +".prototype";

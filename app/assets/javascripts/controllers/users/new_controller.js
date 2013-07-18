@@ -1,6 +1,6 @@
 BaseApp.UsersNewController = Ember.ObjectController.extend({
   needs: ["application"],
-  
+
   startEditing: function() {
     // create a new record on a local transaction
     this.transaction = this.get('store').transaction();
@@ -22,12 +22,6 @@ BaseApp.UsersNewController = Ember.ObjectController.extend({
     // when creating new records, it's necessary to wait for the record to be assigned
     // an id before we can transition to its route (which depends on its id)
     if (this.get('content.id')) {
-      BaseApp.Auth.signIn({
-        data: {
-          'email': this.get('email'),
-          'password': this.get('password'),
-        }
-      });
       this.content.set('validationError',false);
       this.content.set('validationErrors',{});
       this.transitionToRoute('home');
@@ -38,7 +32,7 @@ BaseApp.UsersNewController = Ember.ObjectController.extend({
     this.stopEditing();
     this.transitionToRoute('home');
   },
-  
+
   dismissError: function() {
     this.content.set('validationError',false);
     this.content.set('validationErrors',{});

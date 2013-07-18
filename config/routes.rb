@@ -10,11 +10,11 @@ BaseApp::Application.routes.draw do
     put "/users/:id", :to => "registrations#update"
     post "/users", :to => "registrations#create"
   end
-  
+
   resources :users, only: [:index, :show]
   #resources :users, only: [:index, :show], :constraints => OnlyAjaxRequest.new
   root :to => 'application#index'
-  match "/*path" => "application#index"
+  get "/*path" => "application#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
