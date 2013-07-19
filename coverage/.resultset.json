@@ -264,28 +264,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        8,
-        6,
-        null,
-        2,
-        null,
-        6,
-        6,
-        6,
-        null,
-        null,
-        null,
-        6,
-        null,
         null
       ],
       "/Users/keemon/Documents/rails/base_app/app/helpers/application_helper.rb": [
@@ -314,30 +292,6 @@
         1,
         1,
         1,
-        null
-      ],
-      "/Users/keemon/Documents/rails/base_app/app/controllers/omniauth_callbacks_controller.rb": [
-        1,
-        1,
-        4,
-        null,
-        null,
-        1,
-        4,
-        null,
-        null,
-        1,
-        8,
-        null,
-        8,
-        6,
-        null,
-        null,
-        6,
-        null,
-        2,
-        null,
-        null,
         null
       ],
       "/Users/keemon/Documents/rails/base_app/app/controllers/registrations_controller.rb": [
@@ -494,7 +448,7 @@
         null
       ]
     },
-    "timestamp": 1374179006
+    "timestamp": 1374274292
   },
   "Cucumber Features": {
     "coverage": {
