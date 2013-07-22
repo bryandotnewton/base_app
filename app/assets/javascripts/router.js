@@ -1,7 +1,8 @@
 // history is not supported for IE <= 9.0
-/*BaseApp.Router.reopen({
+BaseApp.Router.reopen({
   location: 'history'
-});*/
+
+});
 
 BaseApp.Router.map(function() {
   this.route('home');
